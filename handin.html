@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href = "handin.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap">
+        
+        <!-- <link rel='icon' href='favicon.png' type='image/x-icon'/> -->
+        <meta charset="utf-8"/>
+        <script src="script.js"></script>
+        <meta name="author" content="Ivery Chen">
+        <meta name="viewprt" content="width=device-width, initial-scale=1.0"/>
+        <title> A/B Testing </title>
+    </head>
+    <body>
+        <div class="all-contents">
+            
+            <div id="main-body">
+
+                <div class="section">
+                    <p class="heading">A/B Testing</p>
+                    <p class="text"> For this assignment, I will be conducting a simple A/B test on two different UI designs and analyzing the results. From these results, I will draw conclusions on whether a design choice could have reasonably impacted user interaction.
+                    </p>
+                    <h2 class="subheading">Part 1: Data Collection  </h2>
+                    <p class="text">I modified the MEDx website by changing the Schedule Appointment buttons to a different colour. I did this because I wanted to separate out the different functional buttons. </p>
+                    <div class="neighbour-image-container">
+                        <div class="image-caption">
+                            <img src="./assets/A.png" alt="screenshot of page A">
+                            <p class="text">screenshot of page A </p>
+                        </div>
+                        <div class="image-caption">
+                            <img src="./assets/B.png" alt="screenshot of page B">
+                            <p class="text">screenshot of page B </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="subheading">Part 2: Analysis</h2>
+
+                    <p class="questions">Hypothesis</p>
+                    <p class="metrics">1. Misclick Rate</p>
+                    <p class="text">
+                        <span class="definition">the frequency with which users click something else on the page before finding the correct button for the task
+                        </span> 
+                    </p>
+
+                    <div class="container-container">
+                        <div class="container">
+                            <p class="text">
+                                <span class="mini-heading">Null hypothesis (H0):</span> there is no difference between in misclick rates between versions A and B of the page
+                            </p>
+                        </div>
+
+                        <div class="container">
+                            <p class="text">
+                                <span class="mini-heading">Alternative Hypothesis (H1):</span>there is a difference between misclick rates between versions A and B,  with higher misclick rate in A than in B
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        <span class="prediction">Prediction: </span>I anticipate  rejecting my null hypothesis because Page B and Page A show significant differences in the user interface that it should impact user patterns
+
+                    </p>
+
+                    <p class="text">
+                        <span class="prediction">Reasoning behind the alternative hypothesis: </span>Page B is designed to minimize misclicks by highlighting certain information and separating information, suggesting it should be more effective in  reducing misclick rates compared to Page A
+                    </p>
+
+
+
+                    <p class="metrics">2. Time on Page</p>
+
+                    <p class="text">
+                        <span class="definition">time spent on the webpage for each user group
+                        </span> 
+                    </p>
+
+                    <div class="container-container">
+                        <div class="container">
+                            <p class="text">
+                                <span class="mini-heading">Null hypothesis (H0):</span>  The average time spent on the webpage is the same for both versions A and B of the page
+                            </p>
+                        </div>
+
+                        <div class="container">
+                            <p class="text">
+                                <span class="mini-heading">Alternative Hypothesis (H1):</span>  The average time spent on the webpage varies across both versions A and B, where users spend more time on A than B
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        <span class="prediction">Prediction: </span>I anticipate to reject my null hypothesis because Page B and Page A are different enough for users to see information differently and therefore leading to reduced time spent on webpage
+                    </p>
+
+                    <p class="text">
+                        <span class="prediction">Reasoning behind the alternative hypothesis: </span> Page B highlights more actionable buttons which will reduce the amount of time users spend on finding them
+                    </p>
+
+                   
+                    <p class="metrics">3. Appointment Completion Rate</p>
+
+                    <p class="text">
+                        <span class="definition">percentage of users who successfully book an appointment with the correct doctor, at the correct location and at the desired time
+                        </span> 
+                    </p>
+
+                    <div class="container-container">
+                        <div class="container">
+                            <p class="text">
+                                <span class="mini-heading">Null hypothesis (H0):</span> There is no difference in appointment completion rates between Versions A and B of the page
+                            </p>
+                        </div>
+
+                        <div class="container">
+                            <p class="text">
+                                <span class="mini-heading">Alternative Hypothesis (H1):</span> There is a significant difference in appointment completion rate between versions A and B, where users have a higher appointment completion rate on B than A
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        <span class="prediction">Prediction: </span>I anticipate to fail to reject my null hypothesis because eventually all users will be able to complete the appointment
+
+                    </p>
+
+                    <p class="text">
+                        <span class="prediction">Reasoning behind the alternative hypothesis: </span>  Page B highlights more actionable buttons which will reduce the amount of time users spend on finding them
+                    </p>
+
+
+
+                    <p class="questions">Statistical Tests</p>
+
+                    <p class="metrics">1. Misclick Rate</p>
+                    <p class="text">
+                        I chose <span class="prediction">chi-squared test </span> because misclicking  is a categorical variable (i.e., users either misclick or they don’t). The chi-squared statistic (χ²) is 10.08, with a p-value of 0.0015 and degrees of freedom (df) of 1.  These values indicate that the observed difference in misclick rates between versions A and B is <span class="prediction">statistically significant</span>. The p-value being lower than the chosen significance level of 0.05 suggests strong evidence against the null hypothesis. Therefore, I <span class="prediction">reject</span> the null hypothesis. This supports the alternative hypothesis, which posited that version B, designed to reduce misclicks, would have a lower misclick rate compared to version A.
+                    </p>
+
+                    <p class="metrics">2. Time on Page</p>
+
+                    <p class="text">
+                        I chose <span class="prediction">one-tailed t-test </span> because I’m comparing the means of two independent groups (users on version A and users on version B). The t-test resulted in a t-score of 9.2207 and a p-value of 0.9999999991. These values suggest that the observed difference in the average time spent on the webpage between versions A and B is <span class="prediction">statistically significant</span>. Since the p-value is very close to 1, the probability of observing such a large difference in average time spent on the webpage by chance is extremely low. This suggests strong evidence against the null hypothesis. Therefore, I <span class="prediction">reject</span> the null hypothesis. This result supports the alternative hypothesis that version B, with its highlighted buttons, would lead to reduced time spent on the webpage compared to version A.
+                    </p>
+
+                    <p class="metrics">3. Appointment Completion Rate</p>
+                    <p class="text">
+                        I chose <span class="prediction">chi-squared test </span>because appointment completion rate is a categorical variable (users either complete the appointment or they don't). The chi-squared test value  (χ²) is 1.0213, with a p-value of 0.3122. These values indicate that the observed difference in appointment completion rates between versions A and B is <span class="prediction">not statistically significant</span>. With the p-value being greater than the chosen significance level of 0.05, there is insufficient evidence to reject the null hypothesis. Therefore, I <span class="prediction">fail to reject</span> the null hypothesis. This result aligns with the prediction that eventually, all users will be able to complete the appointment regardless of the version they interact with. 
+                    </p>
+
+                    <p class="questions">Summary Statistics</p>
+
+                    <p class="text">
+                        I collected 24 data points for each of the A/B tests. 
+                    </p>
+
+                    <p class="metrics">1. Misclick Rate</p>
+
+                    <p class="text">
+                    The <span class="prediction">mean</span> misclick rate for version A was 50% of the total (12 data points). This suggests that users experienced a high level of misclicking on version A. Misclick rate for version B was a lot lower, at 0.083. This indicates that on average users encountered fewer misclicks when interacting with B compared to A.  
+                    </p>
+
+                    <p class="metrics">2. Time on Page</p>
+
+                    <p class="text">
+                        Users spent significantly less time on average  on version B of the webpage compared to version A. The <span class="prediction">mean</span> time spent on page A was approximately 36139.46 units, while for page B, it was significantly lower at approximately 8184.79 units.
+                        
+                        Despite the higher <span class="prediction">variance</span> in version A (212,313,712.7) compared to version B (8,279,689.129), the t-test still indicates a significant difference in the average time spent on the webpage between the two versions. This suggests that despite the wider spread of data points in version A, the difference in means between the two versions remains statistically significant.
+                        
+                    </p>
+
+                    <p class="metrics">3. Appointment Completion Rate</p>
+
+                    <p class="text">
+                    For version A, the <span class="prediction">mean</span> completion rate was 0.958 (23 of out of 24 samples), indicating that most of the users succeeded in booking an appointment. For version B, the mean completion rate was 100%, signifying that all users successfully booked appointments.
+                        
+                    These results suggest that the observed difference in appointment completion rates between the two versions is not statistically significant, contributing to the failure to reject the null hypothesis.  
+                    </p>
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </body>
+</html>
