@@ -138,16 +138,39 @@
                         I chose <span class="prediction">chi-squared test </span> because misclicking  is a categorical variable (i.e., users either misclick or they don’t). The chi-squared statistic (χ²) is 10.08, with a p-value of 0.0015 and degrees of freedom (df) of 1.  These values indicate that the observed difference in misclick rates between versions A and B is <span class="prediction">statistically significant</span>. The p-value being lower than the chosen significance level of 0.05 suggests strong evidence against the null hypothesis. Therefore, I <span class="prediction">reject</span> the null hypothesis. This supports the alternative hypothesis, which posited that version B, designed to reduce misclicks, would have a lower misclick rate compared to version A.
                     </p>
 
+                    <div class="neighbour-image-container">
+                        <div class="image-caption">
+                            <img src="./assets/misclick.png" alt="screenshot of statistical analysis of misclick rates">
+                            <p class="text">statistical analysis of misclick rates</p>
+                        </div>
+                    </div>
+
                     <p class="metrics">2. Time on Page</p>
 
                     <p class="text">
                         I chose <span class="prediction">one-tailed t-test </span> because I’m comparing the means of two independent groups (users on version A and users on version B). The t-test resulted in a t-score of 9.2207 and a p-value of 0.9999999991. These values suggest that the observed difference in the average time spent on the webpage between versions A and B is <span class="prediction">statistically significant</span>. Since the p-value is very close to 1, the probability of observing such a large difference in average time spent on the webpage by chance is extremely low. This suggests strong evidence against the null hypothesis. Therefore, I <span class="prediction">reject</span> the null hypothesis. This result supports the alternative hypothesis that version B, with its highlighted buttons, would lead to reduced time spent on the webpage compared to version A.
                     </p>
 
+                    <div class="neighbour-image-container">
+                        <div class="image-caption">
+                            <img src="./assets/time.png" alt="screenshot of statistical analysis of time spent on website">
+                            <p class="text">statistical analysis of time spent on website</p>
+                        </div>
+                    </div>
+
                     <p class="metrics">3. Appointment Completion Rate</p>
                     <p class="text">
                         I chose <span class="prediction">chi-squared test </span>because appointment completion rate is a categorical variable (users either complete the appointment or they don't). The chi-squared test value  (χ²) is 1.0213, with a p-value of 0.3122. These values indicate that the observed difference in appointment completion rates between versions A and B is <span class="prediction">not statistically significant</span>. With the p-value being greater than the chosen significance level of 0.05, there is insufficient evidence to reject the null hypothesis. Therefore, I <span class="prediction">fail to reject</span> the null hypothesis. This result aligns with the prediction that eventually, all users will be able to complete the appointment regardless of the version they interact with. 
                     </p>
+
+                    <div class="neighbour-image-container">
+                        <div class="image-caption">
+                            <img src="./assets/completion.png" alt="screenshot of statistical analysis of completion rate">
+                            <p class="text">statistical analysis of completion rate</p>
+                        </div>
+                    </div>
+
+                    
 
                     <p class="questions">Summary Statistics</p>
 
